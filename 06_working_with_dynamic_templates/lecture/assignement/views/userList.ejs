@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <% if (namesList.length > 0) { %>
+            <div class="grid">
+                <% for (let name of namesList) { %>
+                    <h1><%= name.title%></h1>         
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Products Found!</h1>
+        <% } %>
+    </main>
+<%- include('includes/end.ejs') %>
